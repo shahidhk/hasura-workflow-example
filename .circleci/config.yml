@@ -13,6 +13,7 @@ jobs:
       - run:
           name: install hasura cli
           command: |
+            apt-get -y update && apt-get install -y curl
             curl -L# -o /bin/hasura https://github.com/hasura/graphql-engine/releases/download/v1.0.0-beta.1/cli-hasura-linux-amd64
             chmod +x /bin/hasura
 
