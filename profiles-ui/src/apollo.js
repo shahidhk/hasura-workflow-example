@@ -12,8 +12,8 @@ const scheme = (proto) => {
   return window.location.protocol === 'https:' ? `${proto}s` : proto;
 };
 
-const wsurl = `${scheme('ws')}://${HASURA_GRAPHQL_ENGINE_HOSTNAME}/v1alpha1/graphql`;
-const httpurl = `${scheme('http')}://${HASURA_GRAPHQL_ENGINE_HOSTNAME}/v1alpha1/graphql`;
+const wsurl = `ws://${HASURA_GRAPHQL_ENGINE_HOSTNAME}/v1alpha1/graphql`;
+const httpurl = `http://${HASURA_GRAPHQL_ENGINE_HOSTNAME}/v1alpha1/graphql`;
 
 // setup websocket link for subscriptions
 const wsLink = new WebSocketLink({
