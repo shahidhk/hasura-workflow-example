@@ -1,6 +1,8 @@
 version: 2
 jobs:
   build:
+    only:
+      - staging
     working_directory: ~/project
     docker:
       - image: debian:stretch
