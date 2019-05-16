@@ -1,8 +1,9 @@
 version: 2
 jobs:
   build:
-    only:
-      - staging
+    branches:
+      only:
+        - staging
     working_directory: ~/project
     docker:
       - image: debian:stretch
@@ -21,6 +22,6 @@ jobs:
       - run:
           name: apply migrations
           command: |
-            cd ../hasura
+            cd ~/project/hasura
             hasura migrate apply --endpoint "$HASURA_ENDPOINT" # --admin-secret "$HASURA_ADMIN_SECRET"
 
