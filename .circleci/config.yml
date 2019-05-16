@@ -1,7 +1,7 @@
 version: 2
 jobs:
-  working_directory: ~/project
   build:
+    working_directory: ~/project
     docker:
       - image: debian:stretch
 
