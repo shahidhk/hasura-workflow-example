@@ -7,6 +7,7 @@ const GET_PROFILES = gql`
     profiles {
       id
       name
+      title
     }
   }
 `;
@@ -21,7 +22,7 @@ const Profiles = () => (
         <ul>
             {data.profiles.map(profile => (
                 <li key={profile.id}>
-                  {profile.name}
+                  {`${profile.title}. ${profile.name}`}
                 </li>
             ))}
         </ul>
