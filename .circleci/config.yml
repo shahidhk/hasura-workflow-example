@@ -21,6 +21,6 @@ jobs:
       - run:
           name: apply migrations
           command: |
-            cd ../
+            cd ../hasura
             hasura migrate apply --endpoint "$HASURA_ENDPOINT" # --admin-secret "$HASURA_ADMIN_SECRET"
 
